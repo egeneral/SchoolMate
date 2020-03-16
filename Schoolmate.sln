@@ -5,6 +5,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schoolmate.Data", "Schoolma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schoolmate.Auth", "Schoolmate.Auth\Schoolmate.Auth.csproj", "{AAC7EA21-3B46-48FB-AD6F-0DFA1513BD66}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1AEE157B-433D-4FA9-B958-B31AFC4BC8D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{9706FDD0-9D69-4100-86B0-DDA7B051A906}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{42940A91-FB02-45D5-8AE0-C80B8CD39319}"
+	ProjectSection(SolutionItems) = preProject
+		Client.Insert.sql = Client.Insert.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +28,10 @@ Global
 		{AAC7EA21-3B46-48FB-AD6F-0DFA1513BD66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAC7EA21-3B46-48FB-AD6F-0DFA1513BD66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAC7EA21-3B46-48FB-AD6F-0DFA1513BD66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AAC7EA21-3B46-48FB-AD6F-0DFA1513BD66} = {9706FDD0-9D69-4100-86B0-DDA7B051A906}
+		{2FC08E8E-206B-4150-9AB1-C99D77967E41} = {9706FDD0-9D69-4100-86B0-DDA7B051A906}
+		{42940A91-FB02-45D5-8AE0-C80B8CD39319} = {1AEE157B-433D-4FA9-B958-B31AFC4BC8D9}
 	EndGlobalSection
 EndGlobal
