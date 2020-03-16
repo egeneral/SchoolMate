@@ -9,15 +9,16 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using Schoolmate.Data.Models;
 
 namespace Schoolmate.Auth.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class ResetPasswordModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<SchoolmateUser> _userManager;
 
-        public ResetPasswordModel(UserManager<IdentityUser> userManager)
+        public ResetPasswordModel(UserManager<SchoolmateUser> userManager)
         {
             _userManager = userManager;
         }

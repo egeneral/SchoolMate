@@ -1,4 +1,6 @@
-@inject SignInManager<IdentityUser> SignInManager
+@using Schoolmate.Data.Models
+
+@inject SignInManager<SchoolmateUser> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
 }

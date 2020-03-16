@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Schoolmate.Data.Models;
 
 namespace Schoolmate.Auth.Areas.Identity.Pages.Account.Manage
 {
     public partial class IndexModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<SchoolmateUser> _userManager;
+        private readonly SignInManager<SchoolmateUser> _signInManager;
 
         public IndexModel(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager)
+            UserManager<SchoolmateUser> userManager,
+            SignInManager<SchoolmateUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -37,7 +38,7 @@ namespace Schoolmate.Auth.Areas.Identity.Pages.Account.Manage
             public string PhoneNumber { get; set; }
         }
 
-        private async Task LoadAsync(IdentityUser user)
+        private async Task LoadAsync(SchoolmateUser user)
         {
             var userName = await _userManager.GetUserNameAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);

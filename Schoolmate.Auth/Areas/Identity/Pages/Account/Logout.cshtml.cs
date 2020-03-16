@@ -7,16 +7,17 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Schoolmate.Data.Models;
 
 namespace Schoolmate.Auth.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class LogoutModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly SignInManager<SchoolmateUser> _signInManager;
         private readonly ILogger<LogoutModel> _logger;
 
-        public LogoutModel(SignInManager<IdentityUser> signInManager, ILogger<LogoutModel> logger)
+        public LogoutModel(SignInManager<SchoolmateUser> signInManager, ILogger<LogoutModel> logger)
         {
             _signInManager = signInManager;
             _logger = logger;

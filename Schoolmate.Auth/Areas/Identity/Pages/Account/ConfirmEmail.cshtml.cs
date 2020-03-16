@@ -8,15 +8,16 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using Schoolmate.Data.Models;
 
 namespace Schoolmate.Auth.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class ConfirmEmailModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<SchoolmateUser> _userManager;
 
-        public ConfirmEmailModel(UserManager<IdentityUser> userManager)
+        public ConfirmEmailModel(UserManager<SchoolmateUser> userManager)
         {
             _userManager = userManager;
         }
