@@ -37,7 +37,7 @@ namespace Schoolmate.Auth
 
             services.AddIdentity<SchoolmateUser, IdentityRole>(options =>
             {
-                options.SignIn.RequireConfirmedEmail = true;
+                options.SignIn.RequireConfirmedEmail = false;
             })
             .AddEntityFrameworkStores<SchoolmateAuthDbContext>()
             .AddDefaultTokenProviders()
@@ -53,6 +53,7 @@ namespace Schoolmate.Auth
                 options.UserInteraction.LogoutUrl = "/Account/Logout";
                 options.Authentication = new AuthenticationOptions()
                 {
+                    CheckSessionCookieName = "smcidp",
                     CookieLifetime = TimeSpan.FromHours(10), // ID server cookie timeout set to 10 hours
                     CookieSlidingExpiration = true
                 };
