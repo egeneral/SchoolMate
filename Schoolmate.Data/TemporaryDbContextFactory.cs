@@ -10,7 +10,7 @@ namespace Schoolmate.Data
         public SchoolmateAuthDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<SchoolmateAuthDbContext>();
-            optionsBuilder.UseSqlServer("Server=localhost;Database=schlmate_auth;User Id=sa;Password=$$GiGatT777;");
+            optionsBuilder.UseSqlServer("Server=localhost;Database=schlmate_auth;User Id=sa;Password=;");
 
             return new SchoolmateAuthDbContext(optionsBuilder.Options);
         }
@@ -22,7 +22,7 @@ namespace Schoolmate.Data
         {
             var optionsBuilder = new DbContextOptionsBuilder<PersistedGrantDbContext>();
             optionsBuilder
-                .UseSqlServer("Server=localhost;Database=schlmate_auth;User Id=sa;Password=$$GiGatT777;",
+                .UseSqlServer("Server=localhost;Database=schlmate_auth;User Id=sa;Password=;",
                     builderOptions => builderOptions.MigrationsAssembly("Schoolmate.Data"));
 
             return new PersistedGrantDbContext(optionsBuilder.Options, new OperationalStoreOptions());
@@ -35,7 +35,7 @@ namespace Schoolmate.Data
         {
             var optionsBuilder = new DbContextOptionsBuilder<ConfigurationDbContext>();
             optionsBuilder
-                .UseSqlServer("Server=localhost;Database=schlmate_auth;User Id=sa;Password=$$GiGatT777;",
+                .UseSqlServer("Server=localhost;Database=schlmate_auth;User Id=sa;Password=;",
                     builderOptions => builderOptions.MigrationsAssembly("Schoolmate.Data"));
 
             return new ConfigurationDbContext(optionsBuilder.Options, new ConfigurationStoreOptions());
