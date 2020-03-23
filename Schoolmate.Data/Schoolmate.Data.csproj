@@ -112,5 +112,6 @@
     <Folder Include="Migrations\ConfigurationDb\" />
     <Folder Include="Migrations\PersistedGrantDb\" />
     <Folder Include="Models\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 </Project>
