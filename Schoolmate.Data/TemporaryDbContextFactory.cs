@@ -10,7 +10,7 @@ namespace Schoolmate.Data
         public SchoolmateAuthDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<SchoolmateAuthDbContext>();
-            optionsBuilder.UseSqlServer("Server=localhost;Database=schlmate_auth;User Id=sa;Password=;");
+            optionsBuilder.UseSqlServer("Server=localhost;Database=schlmate_auth;User Id=sa;Password=$$GiGatT777;");
 
             return new SchoolmateAuthDbContext(optionsBuilder.Options);
         }
